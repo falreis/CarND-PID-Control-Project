@@ -4,18 +4,23 @@
 class PID {
 public:
   /*
-  * Errors
+   * Errors
   */
   double p_error;
   double i_error;
   double d_error;
 
   /*
-  * Coefficients
+   * Coefficients
   */ 
   double Kp;
   double Ki;
   double Kd;
+
+  /*
+   * Twiddle initalized
+  */
+  bool is_twiddle_initialized;
 
   /*
   * Constructor
@@ -41,6 +46,13 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+  
+  
+  //Calculate Twiddle algorithm to optmize parameters
+  void Twiddle(const double cte);
+
+  //Calculate Twiddle error
+  double TwiddleError(const double *p, const double *dp);
 };
 
 #endif /* PID_H */
