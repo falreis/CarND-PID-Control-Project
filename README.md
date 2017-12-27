@@ -64,7 +64,7 @@ PID Controller worked well. The car complete the track without any fault and in 
 
 ## PID Controller Parameter Tunning
 
-All controller parameter was defined using manual tuning. First, I started with hyperparameters showed in the PID classes. Then, I tuned them.
+All controller parameter was defined using manual tuning. I started with hyperparameters showed in the PID classes. Then, I tuned them to increase the performance and keep the car on track.
 
 ## Dependencies
 
