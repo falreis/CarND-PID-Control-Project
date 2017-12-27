@@ -18,11 +18,6 @@ public:
   double Kd;
 
   /*
-   * Twiddle initalized
-  */
-  bool is_twiddle_initialized;
-
-  /*
   * Constructor
   */
   PID();
@@ -46,13 +41,6 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
-  
-  
-  //Calculate Twiddle algorithm to optmize parameters
-  void Twiddle(const double cte);
-
-  //Calculate Twiddle error
-  double TwiddleError(const double *p, const double *dp);
 };
 
 #endif /* PID_H */
